@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sleeping trees</title>
-    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>http://localhost:8080</link>
-    <description>Be still,my heart,these great trees are prayers.</description>
-    <pubDate>Thu, 01 Jan 2015 08:00:00 +0800</pubDate>
+    <title>Oakfire</title>
+    <atom:link href="blog.joak.org/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>blog.joak.org</link>
+    <description>Yes, it's a joke.</description>
+    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>Hello 2015</title>
-      <link>http://localhost:8080/articles/hello-2015/</link>
-      <pubDate>Thu, 01 Jan 2015 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/hello-2015/</guid>
+      <link>blog.joak.org/articles/hello-2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">blog.joak.org/articles/hello-2015/</guid>
       <author></author>
-      <description>&lt;p&gt;2015 = 1024 + 512 + 256 + 128 + 64 + 16 + 8 + 4 + 2 + 1&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;　　2015 = 1024 + 512 + 256 + 128 + 64 + 16 + 8 + 4 + 2 + 1  &lt;/p&gt;
-&lt;p&gt;　　上面个式子，少了32。  &lt;/p&gt;
+      <description>&lt;p&gt;　　2015 = 1024 + 512 + 256 + 128 + 64 + 16 + 8 + 4 + 2 + 1  &lt;/p&gt;
+&lt;p&gt;　　上面个式子，少了32。  &lt;span class=&quot;more&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;　　上一年元旦怎么过的忘了，今年元旦一大早，站在窗户前的阳光里，呼吸着冰冷但新鲜的空气，楼前的河流已经冻结，光滑的镜面反射着阳光，似乎可以静止几十年，然而河边路上的车流不会停歇，半夜加速的刺耳声变成了拥挤的轮胎摩擦声与喇叭声，一点也没有当年北京某年小区内的寂静。呵，近在眼前的沙沙声响起，掉光叶子的不知名的树也来找下存在感，在这住了近一年，仍不知道这树是哪种树，记得在北京是各种梧桐，武汉是法国梧桐，家里有松树杉树，中学仍然是各种梧桐，小学里是女贞树。一直对居住附近的树蛮在意的，西三旗五层楼高的梧桐染上了某种虫害，被齐腰砍断，还遗憾过一阵子————然而第二年春断枝旁抽发新枝，繁茂时远看也有一簇绿色，只不过只有一层楼高了。想得多了，发现眼前这窗外不知名的树，在2014春刚租住时倒是观察过一阵子，当时也是如此光秃秃掉光了树叶，因为窗外车声过于吵，我期待着它长出新叶阻隔噪声．长出后效果寥寥，就没怎么观察了。或者是错觉，总觉得比起当初，这些显得毫无生气的枝条，似乎左面多了一些，又在右面少了一些。  &lt;/p&gt;
 &lt;p&gt;　　不知不觉，树轮又添一轮了。左面是太阳升起至午，右面受右侧楼房阻隔，这树在明年，哦不，今年春发新叶后，该能会更好得吸收阳光，光合作用，到第二年，所添树轮应比今年要厚。  &lt;/p&gt;
 &lt;p&gt;　　树尤如此，人何以堪。  &lt;/p&gt;
@@ -27,45 +25,45 @@
     </item>
     <item>
       <title>Markdown syntax</title>
-      <link>http://localhost:8080/articles/markdown-syntax/</link>
-      <pubDate>Thu, 02 Feb 2012 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/markdown-syntax/</guid>
+      <link>blog.joak.org/articles/markdown-syntax/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">blog.joak.org/articles/markdown-syntax/</guid>
       <author></author>
       <description>&lt;p&gt;Full markdown syntax taken from John Gruber’s &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Daring Fireball&lt;/a&gt;.
 Did you know that 9 out of 10 bloggers prefer to write in markdown?&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&quot;markdown-syntax&quot;&gt;Markdown: Syntax&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#overview&quot;&gt;Overview&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#philosophy&quot;&gt;Philosophy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#html&quot;&gt;Inline HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#autoescape&quot;&gt;Automatic Escaping for Special Characters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#overview&quot;&gt;Overview&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#philosophy&quot;&gt;Philosophy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#html&quot;&gt;Inline HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#autoescape&quot;&gt;Automatic Escaping for Special Characters&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#block&quot;&gt;Block Elements&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#p&quot;&gt;Paragraphs and Line Breaks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#header&quot;&gt;Headers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#blockquote&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#list&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#precode&quot;&gt;Code Blocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#hr&quot;&gt;Horizontal Rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#block&quot;&gt;Block Elements&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#p&quot;&gt;Paragraphs and Line Breaks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#header&quot;&gt;Headers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#blockquote&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#list&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#precode&quot;&gt;Code Blocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#hr&quot;&gt;Horizontal Rules&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#span&quot;&gt;Span Elements&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#link&quot;&gt;Links&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#em&quot;&gt;Emphasis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#img&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#span&quot;&gt;Span Elements&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#link&quot;&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#em&quot;&gt;Emphasis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#img&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#misc&quot;&gt;Miscellaneous&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#backslash&quot;&gt;Backslash Escapes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#autolink&quot;&gt;Automatic Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#misc&quot;&gt;Miscellaneous&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#backslash&quot;&gt;Backslash Escapes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#autolink&quot;&gt;Automatic Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This document is itself written using Markdown; you
-can &lt;a href=&quot;http://localhost:8080/projects/markdown/syntax.text&quot;&gt;see the source for it by adding ‘.text’ to the URL&lt;/a&gt;.&lt;/p&gt;
+can &lt;a href=&quot;/projects/markdown/syntax.text&quot;&gt;see the source for it by adding ‘.text’ to the URL&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
@@ -152,7 +150,7 @@ into &lt;code&gt;&amp;amp;amp;&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;AT&amp;amp;T
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Markdown will translate it to:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;AT&amp;amp;amp;T
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Similarly, because Markdown supports &lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#html&quot;&gt;inline HTML&lt;/a&gt;, if you use
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Similarly, because Markdown supports &lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#html&quot;&gt;inline HTML&lt;/a&gt;, if you use
 angle brackets as delimiters for HTML tags, Markdown will treat them as
 such. But if you write:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;4 &amp;lt; 5
@@ -182,7 +180,7 @@ character in a paragraph into a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt; ta
 end a line with two or more spaces, then type return.&lt;/p&gt;
 &lt;p&gt;Yes, this takes a tad more effort to create a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;, but a simplistic
 “every line break is a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;“ rule wouldn’t work for Markdown.
-Markdown’s email-style &lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#blockquote&quot;&gt;blockquoting&lt;/a&gt; and multi-paragraph &lt;a href=&quot;http://localhost:8080/articles/markdown-syntax/#list&quot;&gt;list items&lt;/a&gt;
+Markdown’s email-style &lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#blockquote&quot;&gt;blockquoting&lt;/a&gt; and multi-paragraph &lt;a href=&quot;blog.joak.org/articles/markdown-syntax/#list&quot;&gt;list items&lt;/a&gt;
 work best — and look better — when you format them with hard breaks.&lt;/p&gt;
 &lt;h3 id=&quot;header&quot;&gt;Headers&lt;/h3&gt;
 
