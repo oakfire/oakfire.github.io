@@ -40,7 +40,7 @@
 * linux osx 等用源码编译或直接包安装,比如ubuntu下:
 
   ```
-  sudo apt-get install erlang</pre>
+  sudo apt-get install erlang
   ```
           </script>
         </section>
@@ -64,8 +64,20 @@
 ## Syntax
 [reference manual](http://www.erlang.org/doc/reference_manual/)
 
-* 注释: `%`　　结束: `.`　并列: `;`　顺序:`,`
-* term: 表达式最小单位 包括 integer, float, atom, string, list, map, tuple. 返回自身.
+语句中符号的涵义:
+
+* 注释: `%` 单行注释
+* 结束: `.` 点号表示一个函数定义, 函数执行, 条件表达式的结束
+* 并列: `;` 分号表示并列关系,代表条件判断,参数条件判断,消息匹配条件的并列
+* 顺序: `,` 逗号表示顺序关系
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+表达式最小单位叫term. 包括 integer, float, atom, string, list, map, tuple. 
+
+term 返回自身.
+
 * 变量: 大写字母开头, 一次性赋值,函数式
 * atom: 小写字母开头,常量名,模块名,函数名
 * tuple: 元组 ` {point, 10, 45}`
