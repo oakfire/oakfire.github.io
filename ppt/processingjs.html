@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>processing.js</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme" />
+    <script src="js/processing.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->  
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>ProcessingJS</h1>
+          <h4>a port of the Processing Visualization Language</h4>
+          <p><small>Official site: <a href=http://processingjs.org>processingjs.org</a></small></p>
+          <p><small>PPT Created by <a href=http://oak71.com>yongjiu.wei</a></small></p>
+        </section>
+        <!-- Aabout processing.js-->
+        <section>
+          <h2>About Processing.js</h2>
+          <ol>
+            <li>Processing.js is the sister project of the <a href=http://processing.org> Processing </a> visual programming language, designed for the web. </li>
+            <li>Processing.js makes your data visualizations, digital art, interactive animations, educational graphs, video games, etc. </li>
+            <li>Allowing Processing code to be run by any HTML5 compatible browser</li>
+          </ol>
+          <p>example: <a href=http://balldroppings.com/js/>balldroppings</a>
+        </section>
+        <!-- using processing -->
+        <section>
+          <section>
+            <h2>Using Processing</h2>
+            <p> two ways of implementing processing </p>
+          </section>
+          <section>
+            <h3>First Mehtod</h3>
+            <p>Needed files:</p>
+            <ol>
+              <li>processing.js</li>
+              <li>anything.html</li>
+              <li>anything.pde</li>
+            </ol>
+          </section>
+          <section>
+            <p>The <em>anything.html</em> file will look like:</p>
+            <pre><code>
+              &lt;script src="processing.js"&gt;&lt;/script&gt;
+              &lt;canvas data-processing-sources="anything.pde">&lt;/canvas&gt;
+            </code>
+            </pre>
+          </section>
+          <section>
+            <p>The <b>anything.pde</b> file will look like:</p>
+            <pre><code>
+              void setup()
+              {
+                size(200,200);
+                background(125);
+                fill(255);
+                noLoop();
+                PFont fontA = loadFont("courier");
+                textFont(fontA, 14);  
+              }
+
+              void draw(){  
+                text("Hello Web!",20,20);
+              }
+            </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Second Method</h3>
+            <p>Needed files: </p>
+            <ol>
+              <li>processing.js</li>
+              <li>anything.html</li>
+            </ol>
+          </section>
+          <section>
+            <p>In second method the <b>anything.html</b> file will look like:<p>
+            <pre><code>
+              &lt;script src="processing.js"&gt;&lt;/script&gt;
+              &lt;script type="text/processing" data-processing-target="mycanvas"&gt;
+              void setup()
+              {
+                size(200,200);
+                background(125);
+                fill(255);
+                noLoop();
+                PFont fontA = loadFont("courier");
+                textFont(fontA, 14);  
+              }
+
+              void draw(){  
+                text("Hello Web!",20,20);
+              }
+              &lt;/script&gt;
+              &lt;canvas id="mycanvas"&gt;&lt;/canvas&gt;
+            </code></pre>
+          </section>
+          <section>
+            <script type="text/processing" data-processing-target="mycanvas">
+            void setup()
+            {
+              size(200,200);
+              background(125);
+              fill(255);
+              noLoop();
+              PFont fontA = loadFont("courier");
+              textFont(fontA, 14);  
+            }
+
+            void draw(){  
+              text("Hello Web!",20,20);
+            }
+            </script>
+            <canvas id="mycanvas"></canvas>
+          </section>
+        </section>
+        
+        <!-- basic syntax -->
+        <section>
+          <section>
+            <h2>Basic Syntax</h2>
+            <p>A brief look at the structure of a Processing sketch reveals how easy it is to program interactive visualizations.</p>
+          </section>
+          <section>
+            <ol>
+              <li>Begin by defining global variables</li>
+              <li>Create a <em>setup()</em> function, control the visualization's properties</li>
+              <li>Create a <em>draw()</em> function, loops continuously</li>
+              <li>Adding interactivity, such as <em>mousePressed()</em></li>
+            </ol>
+          </section>
+          <section>
+            <p>1.Begin by defining global variables</p>
+            <pre><code>
+              // Global variables
+              float radius = 50.0;
+              int X, Y;
+              int nX, nY;
+              int delay = 16;
+            </code></pre>
+          </section>
+          <section>
+            <p>2.Create a <em>setup()</em> function, control the visualization's properties</p>
+            <pre><code>
+              // Setup the Processing Canvas
+              void setup(){
+                size( 200, 200 );
+                strokeWeight( 10 );
+                frameRate( 15 );
+                X = width / 2;
+                Y = height / 2;
+                nX = X;
+                nY = Y;  
+              }
+            </code></pre>
+          </section>
+          <section>
+            <p>3.Create a <em>draw()</em> function, loops continuously</p>
+            <pre><code>
+              // Main draw loop
+              void draw(){
+                radius = radius + sin( frameCount / 4 );
+                // Track circle to new destination
+                X+=(nX-X)/delay;
+                Y+=(nY-Y)/delay;
+                // Fill canvas grey
+                background( 100 );
+                // Set fill-color to blue
+                fill( 0, 121, 184 );
+                // Set stroke-color white
+                stroke(255); 
+                // Draw circle
+                ellipse( X, Y, radius, radius );                  
+              }
+            </code></pre>
+          </section>
+
+          <section>
+              <canvas width="200px" height="200px" data-processing-sources="pde/basic-example.pde"></canvas>
+              <p>
+                Basic Example:
+                <a href="pde/basic-example.pde">Source</a>
+              </p>
+          </section>
+        </section>
+        <!-- demos -->
+        <section>
+          <section>
+            <h2>Some Demos</h2>
+          </section>
+          <section>
+            <p><a href=http://matrix.senecac.on.ca/~asalga/pjswebide/index.php>3D Sketches</a></p>
+          </section>
+          <section>
+            <p>Tree stochastic noise. From <a href="http://natureofcode.com/book/introduction">nature of code</a></p>
+            <canvas data-processing-sources="pde/TreeStochasticNoise.pde">
+            </canvas>             
+          </section>
+
+        </section>
+        <section>
+          <h2>Q&A</h2>
+        </section>
+        <section>
+          <ul>
+            <li><a href=http://processingjs.org>processingjs.org</a></li>
+            <li><a href=http://processing.org>processing.org</a></li>
+            <li><a href=http://natureofcode.com>natureofcode</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        history: true,
+        
+        transition: 'slide',
+
+        dependencies:[
+          { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+
+    </script>
+  </body>

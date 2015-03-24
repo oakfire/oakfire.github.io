@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Erlang 介绍</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+# Erlang 
+"**Erlang** is a programming language used to build massively scalable soft real-time systems with requirements on high availability."
+
+* Erlang official site: [erlang.org](http://erlang.org)
+* PPT created by [yongjiu.wei](mailto:oakfire@163.com)
+          </script>       
+        </section>
+
+        <section>
+            <h2> What is Erlang.</h2>
+            <ul><li>A functional language.</li>
+                <li class="fragment">Concurency and distributed programming. </li>
+                <li class="fragment">Scala、Clojure、Go、Rust、Nodejs</li>
+                <li class="fragment">Whatsapp</li>
+            </ul>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+## Installation
+* [download](http://www.erlang.org/download.html) page
+* windows 下载包安装
+* linux osx 等用源码编译或直接包安装,比如ubuntu下:
+
+  ```
+  sudo apt-get install erlang</pre>
+  ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+## Usage
+* 输入 `erl` 可进入交互界面
+* `b().`: 查看绑定变量
+* `f().`: 清除绑定变量,`f(val).`,清除变量`val`
+* `h().`: 查看历史命令
+* `q().`: 退出命令行
+* 创建应用? application:start/1
+* OTP 
+
+          </script>
+        </section>
+        <section>
+        <section data-markdown>
+          <script type="text/template">
+## Syntax
+[reference manual](http://www.erlang.org/doc/reference_manual/)
+
+* 注释: `%`　　结束: `.`　并列: `;`　顺序:`,`
+* term: 表达式最小单位 包括 integer, float, atom, string, list, map, tuple. 返回自身.
+* 变量: 大写字母开头, 一次性赋值,函数式
+* atom: 小写字母开头,常量名,模块名,函数名
+* tuple: 元组 ` {point, 10, 45}`
+* list: 列表 `[1,2,3]`
+  * 字符串: `"abc"`, 本质为字符list.
+* map: `#{"key"=>42}`
+* Bit: <<>>
+* 类型转换: 使用`atom_to_list`等相应函数.
+          </script>
+        </section>
+        
+        <section data-markdown>
+          <script type="text/template">
+###Pattern Match
+* `=` : 模式匹配操作,先执行右值,再匹配左值
+
+  ```
+      1> L1={first, second}. % 当左值是个变量,直接定义
+      2> {_,Who}=L1. % 模式匹配, Who 值为 second
+      3> {A,{B,C},D}={1,{2,3},4} % 可嵌套匹配
+  ```
+* `_` : 下划线表示任意值
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+###Module
+* [Official doc:Modules](http://www.erlang.org/doc/reference_manual/modules.html)
+* 一个文件一个Module.
+* Module Attributes: 模块属性 `-Tag(Value)`
+* 模块属性查看: `Module:module_info/1`
+* Standard modules: 查看帮助 `erl -man modulename`
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+###Function
+* 必须在模块里定义
+* example:定义一个阶乘函数, test.erl文件
+  ```
+  -module(test).
+  -export([fac/1]). % 函数完整名称:<函数名>/<参数个数>
+
+  fac(0) -> 1; % 注意这里是分号
+  fac(N) -> N * fac(N-1).
+  ```
+* 支持匿名函数,关键字:`fun`, `end`
+* 函数赋给变量: `Myfun = fun test:fac/1`
+* 动态调用: `apply(mod, fun, args)`
+* `list_to_atom("funname")`, `list_to_existing_atom("funname")`
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+
+* Built In Functions: BIFs 内嵌函数
+* Higher Order Functions: `foreach`,`map`
+* if 与 case 条件判断
+* 没有循环
+
+          </script>
+        </section>
+
+        </section>
+
+        <section>
+        <section data-markdown>
+          <script type="text/template">
+##Concurrent Programming
+* Actor model.轻量级进程 语言底层实现调度器,以函数为单位,无循环保证平等
+* process: 每个process都有一个消息队列
+* 开启新 process:`spawn(mod, fun, arglist)`,返回值为 pid
+* process 名可以预注册为atom: `register(name, Pid)`
+* 等待消息:`receive`, 对消息模式匹配 
+* 发送消息:`Pid ! Message` 
+
+         </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+example:
+
+```
+-module(tut16).
+
+-export([start/0, ping/1, pong/0]).
+
+ping(0) ->
+    pong ! finished,
+    io:format("ping finished~n", []);
+
+ping(N) ->
+    pong ! {ping, self()},
+    receive
+        pong ->
+            io:format("Ping received pong~n", [])
+    end,
+    ping(N - 1).
+
+pong() ->
+    receive
+        finished ->
+            io:format("Pong finished~n", []);
+        {ping, Ping_PID} ->
+            io:format("Pong received ping~n", []),
+            Ping_PID ! pong,
+            pong()
+    end.
+
+start() ->
+    register(pong, spawn(tut16, pong, [])),
+    spawn(tut16, ping, [3]).
+```
+
+         </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+result:
+
+```
+2> c(tut16).
+{ok, tut16}
+3> tut16:start().
+<0.38.0>
+Pong received ping
+Ping received pong
+Pong received ping
+Ping received pong
+Pong received ping
+Ping received pong
+ping finished
+Pong finished
+```
+ 
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+## Distributed Programming
+* erlang 在电脑(节点)间有基本的安全框架
+* 最简单方式: 家目录下设置包含同样 atom 的 `.erlang.coolie`文件
+* `erl -sname my_name`: 启动后当前erl node 名则为 `my_name@computer`
+* 节点间发送消息:`{registered_name, node_name} ! Message`
+* `spawn` 也可以启动另一个节点的 process:`spawn(node_name, mod, fun, arglist)`
+          </script>
+        </section>
+
+        </section>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+#Q&A
+          </script>
+        </section>
+
+      </div>
+    </div>
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        history: true,
+        
+        transition: 'slide',
+
+        dependencies:[
+          { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
