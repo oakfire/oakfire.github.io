@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - test</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme" />
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->  
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+# 算法导论笔记
+这是记录阅读算法导论的笔记
+
+Created by [yongjiu.wei](mailto:oakfire@163.com)
+          </script>       
+        </section>
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第2章 算法基础
+* 插入排序(INSERT-SORT)与循环不变式
+* 证明循环不变式三个性质:
+  * **初始化**:第一次迭代前, 为真;
+  * **保持**:本次为真,那么下次迭代也为真;
+  * **终止**:迭代终止时，不变式提供一个有助于证明算法正确的性质． 
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+###2.2分析算法
+* 最坏情况与平均情况,插入排序 O(n2)
+* 通常只关注最坏情况
+* 增长量级 O(n),O(lgn)...
+            </script>
+          </section> 
+
+          <section data-markdown>
+            <script type="text/template">
+
+###2.3设计算法
+
+* 分治法.三步骤:
+  * **分解**原问题为若干规模较小的同子问题;
+  * **解决**:递归地求解子问题.子问题规模足够小时直接求解;
+  * **合并**子问题成原问题的解.
+* 归并排序(MERGE-SORT)  O(nlgn) 
+* 思考题: 冒泡排序(BUBBLE-SORT);逆序对数量与插入排序的关系
+            </script>
+          </section>
+
+        </section>
+        
+        
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第3章 函数的增长
+* 定义
+  * Θ记号:表示函数渐进紧确上下界
+  * Ο记号:渐进上界,包括渐进确界,与 非渐进确界
+  * Ω记号:渐进下界
+  * ο记号与ω记号: 只包括非渐进确界.
+* 性质: 传递性.自反性.对称性,转置对称性; 不满足三分性
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+###3.2 常用函数
+todo: LETEX 
+
+数学函数的符号表示
+
+**单调性**, **向下取整与向上取整**, **模运算**
+
+**多项式**, **指数**, **对数**, **阶乘**, **多重函数**
+
+**多重对数函数**,**斐波那契数**,**黄金分割率**
+
+思考题:3-3 根据渐进增长率排序
+            </script>
+          </section>
+
+        </section>
+
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##测试代码块
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+##测试代码块
+            </script>
+          </section>
+
+        </section>
+
+      </div>
+    </div>
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        history: true,
+        
+        transition: 'slide',
+
+        dependencies:[
+          { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+    <div  style="display: block; position: absolute; bottom: 35px; left: 35px;  z-index: 20;">
+      <a href="/" style="display: inline-block; height: 34px; line-height: 34px; box-sizing: border-box; border: 1px solid #AAA; color: #AAA; text-decoration:none; text-transform: uppercase; padding:0 5px; ">go to ppt index</a>
+    </div>
+  </body>
