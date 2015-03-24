@@ -491,8 +491,10 @@ indented from the left margin using up to three spaces);&lt;/li&gt;
 in double or single quotes, or enclosed in parentheses.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The following three link definitions are equivalent:&lt;/p&gt;
-&lt;p&gt;  &lt;a href=&quot;http://example.com/&quot; title=&quot;Optional Title Here&quot;&gt;foo&lt;/a&gt;: &lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;  ‘Optional Title Here’&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; There is a known bug in Markdown.pl 1.0.1 which prevents
+&lt;pre&gt;&lt;code&gt;[foo]: http://example.com/  &amp;quot;Optional Title Here&amp;quot;
+[foo]: http://example.com/  &amp;#39;Optional Title Here&amp;#39;
+[foo]: http://example.com/  (Optional Title Here)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; There is a known bug in Markdown.pl 1.0.1 which prevents
 single quotes from being used to delimit link titles.&lt;/p&gt;
 &lt;p&gt;The link URL may, optionally, be surrounded by angle brackets:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[id]: &amp;lt;http://example.com/&amp;gt;  &amp;quot;Optional Title Here&amp;quot;
@@ -505,20 +507,22 @@ processing, and are stripped from your document in the HTML output.&lt;/p&gt;
 &lt;p&gt;Link definition names may consist of letters, numbers, spaces, and
 punctuation — but they are &lt;em&gt;not&lt;/em&gt; case sensitive. E.g. these two
 links:&lt;/p&gt;
-&lt;p&gt;  [link text][a]
-  [link text][A]&lt;/p&gt;
-&lt;p&gt;are equivalent.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[link text][a]
+[link text][A]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;are equivalent.&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;implicit link name&lt;/em&gt; shortcut allows you to omit the name of the
 link, in which case the link text itself is used as the name.
 Just use an empty set of square brackets — e.g., to link the word
 “Google” to the google.com web site, you could simply write:&lt;/p&gt;
-&lt;p&gt;  &lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;And then define the link:&lt;/p&gt;
-&lt;p&gt;Because link names may contain spaces, this shortcut even works for
+&lt;pre&gt;&lt;code&gt;[Google][]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then define the link:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Google]: http://google.com/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Because link names may contain spaces, this shortcut even works for
 multiple words in the link text:&lt;/p&gt;
-&lt;p&gt;  Visit &lt;a href=&quot;http://daringfireball.net/&quot;&gt;Daring Fireball&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;p&gt;And then define the link:&lt;/p&gt;
-&lt;p&gt;Link definitions can be placed anywhere in your Markdown document. I
+&lt;pre&gt;&lt;code&gt;Visit [Daring Fireball][] for more information.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then define the link:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Daring Fireball]: http://daringfireball.net/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Link definitions can be placed anywhere in your Markdown document. I
 tend to put them immediately after each paragraph in which they’re
 used, but if you want, you can put them all at the end of your
 document, sort of like footnotes.&lt;/p&gt;

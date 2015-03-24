@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 }
 
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Lora','Microsoft Jhenghei','Hiragino Sans GB','Microsoft YaHei', serif;
   font-size: 21px;
   line-height: 1.52;
   background-color: #f8f8f8;
@@ -35,8 +35,8 @@ p {
 pre {
   font-size: 0.9em;
   overflow: auto;
-  background: #fff;
-  border: 1px dashed #d2d2d2;
+  background: #F7F7F7;
+  border: 1px solid #d2d2d2;
   border-radius: 0.25em;
   margin-bottom: 1.8em;
   padding: 1em;
@@ -206,7 +206,7 @@ footer .nav a {
 }
 
 footer .about {
-  border-top: 1px dashed #d2d2d2;
+  border-top: 1px solid #d2d2d2;
   padding: 2.2em 3em;
   font-size: 0.7em;
   -webkit-column-count: 3;
@@ -228,6 +228,10 @@ footer .copy {
 
 footer .copy, footer .copy a {
   color: #8e8e8e;
+}
+
+footer .copy a:hover {
+  color: #ff8000;
 }
 
 footer .content-wrap {
@@ -280,6 +284,15 @@ footer .content-wrap {
   padding-right: 0.3em;
 }
 
+.article.intro .content .more a {
+  color: #000;
+}
+
+.article.intro .content .more a:hover {
+  color: #FF8000;
+  text-decoration: underline;
+}
+
 .article .content img {
   display: block;
   width: 100%;
@@ -294,6 +307,14 @@ footer .content-wrap {
   letter-spacing: 1px;
 }
 
+.content a {
+  color: #0095DD;
+  text-decoration: none;
+}
+.content a:hover {
+  color: #0095DD; 
+  text-decoration: underline;
+}
 /* archive */
 
 .archive {
@@ -360,9 +381,9 @@ footer .content-wrap {
 /* code styling */
 
 code {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: Consolas, 'Anonymous Pro', monospace;
   font-size: 0.85em;
-  color: #000;
+  color: #171717;
 }
 
 pre code {
@@ -374,7 +395,7 @@ p code {
   padding: 0.1em 0.3em 0.2em;
   border-radius: 0.3em;
   position: relative;
-  background: #fffff3;
+  background: #F1F1F1;
 
   white-space: nowrap;
 }

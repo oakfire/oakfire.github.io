@@ -13,7 +13,7 @@
   <body class="article-detail">
     <header class="header">
       <div class="overlay"></div>
-      <div class="inner"><a href="/" class="avatar"><img src="/avatar.png"></a>
+      <div class="inner"><a href="http://blog.joak.org" class="avatar"><img src="/avatar.png"></a>
         <div class="logo">
           <h1><a href="/">Oakfire</a></h1>
           <p class="description">Yes, it's a joke.</p>
@@ -470,8 +470,10 @@ indented from the left margin using up to three&nbsp;spaces);</li>
 in double or single quotes, or enclosed in&nbsp;parentheses.</li>
 </ul>
 <p>The following three link definitions are&nbsp;equivalent:</p>
-<p>  <a href="http://example.com/" title="Optional Title Here">foo</a>: <a href="http://example.com/">http://example.com/</a>  ‘Optional Title&nbsp;Here’</p>
-<p><strong>Note:</strong> There is a known bug in Markdown.pl 1.0.1 which prevents
+<pre><code>[foo]: http://example.com/  &quot;Optional Title Here&quot;
+[foo]: http://example.com/  &#39;Optional Title Here&#39;
+[foo]: http://example.com/  (Optional Title Here)
+</code></pre><p><strong>Note:</strong> There is a known bug in Markdown.pl 1.0.1 which prevents
 single quotes from being used to delimit link&nbsp;titles.</p>
 <p>The link <span class="caps">URL</span> may, optionally, be surrounded by angle&nbsp;brackets:</p>
 <pre><code>[id]: &lt;http://example.com/&gt;  &quot;Optional Title Here&quot;
@@ -483,20 +485,22 @@ or tabs for padding, which tends to look better with longer&nbsp;URLs:</p>
 processing, and are stripped from your document in the <span class="caps">HTML</span>&nbsp;output.</p>
 <p>Link definition names may consist of letters, numbers, spaces, and
 punctuation — but they are <em>not</em> case sensitive. E.g. these two&nbsp;links:</p>
-<p>  [link text][a]
-  [link&nbsp;text][A]</p>
-<p>are&nbsp;equivalent.</p>
+<pre><code>[link text][a]
+[link text][A]
+</code></pre><p>are&nbsp;equivalent.</p>
 <p>The <em>implicit link name</em> shortcut allows you to omit the name of the
 link, in which case the link text itself is used as the name.
 Just use an empty set of square brackets — e.g., to link the word
 “Google” to the google.com web site, you could simply&nbsp;write:</p>
-<p>  <a href="http://google.com/">Google</a></p>
-<p>And then define the&nbsp;link:</p>
-<p>Because link names may contain spaces, this shortcut even works for
+<pre><code>[Google][]
+</code></pre><p>And then define the&nbsp;link:</p>
+<pre><code>[Google]: http://google.com/
+</code></pre><p>Because link names may contain spaces, this shortcut even works for
 multiple words in the link&nbsp;text:</p>
-<p>  Visit <a href="http://daringfireball.net/">Daring Fireball</a> for more&nbsp;information.</p>
-<p>And then define the&nbsp;link:</p>
-<p>Link definitions can be placed anywhere in your Markdown document. I
+<pre><code>Visit [Daring Fireball][] for more information.
+</code></pre><p>And then define the&nbsp;link:</p>
+<pre><code>[Daring Fireball]: http://daringfireball.net/
+</code></pre><p>Link definitions can be placed anywhere in your Markdown document. I
 tend to put them immediately after each paragraph in which they’re
 used, but if you want, you can put them all at the end of your
 document, sort of like&nbsp;footnotes.</p>
