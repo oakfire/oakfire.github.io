@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
 
-    <title>reveal.js - test</title>
+    <title>clrs - ppt</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/league.css" id="theme" />
+    <link rel="stylesheet" href="lib/css/zenburn.css">
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->  
@@ -121,7 +122,7 @@ todo: LETEX
     </div>
     
     <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+    <script src="js/reveal.min.js"></script>
     <script>
       Reveal.initialize({
         history: true,
@@ -131,7 +132,7 @@ todo: LETEX
         dependencies:[
           { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } }
+          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ]
       });
     </script>
