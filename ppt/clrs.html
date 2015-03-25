@@ -20,7 +20,7 @@
         <section data-markdown>
           <script type="text/template">
 # 算法导论笔记
-这是记录阅读算法导论的笔记
+这是阅读算法导论的笔记
 
 Created by [yongjiu.wei](mailto:oakfire@163.com)
           </script>       
@@ -99,6 +99,51 @@ todo: LETEX
           </section>
 
         </section>
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第4章 分治策略
+
+* 分治策略算法的运行时间要求解**递归式**
+
+* **递归式**(recurrence)是一个等式或不等式,通过函数更小输入上的值来描述本身
+
+* 本章介绍三种求解递归式的方法,即Ο或Θ的渐进界:
+  * **代入法**　　数学归纳法证明猜测边界
+  * **递归树法**　构建代价树,寻求效率边界
+  * **主方法**　　可求解` T(n)=aT(n/b) + f(n)` 其中`a>=1,b>1,f(n)`是给定的函数
+            </script>
+ 
+          <section data-markdown>
+            <script type="text/template">
+###4.1 最大子数组(maximum subarray)问题
+
+* 寻找整数数组的和最大的非空连续子数组
+* 数组[low,high]取中点为mid,问题可分解为以下三值的最大者
+  * [low,mid]子问题的解
+  * [mid,high]子问题的解
+  * 跨越mid的最大子数组,线型时间
+* 运行时间T(n)的递归式:
+* 习题4.1-5:最大子数组问题有线性时间解:Kanade 算法
+  * 启发式. 扫描逐个求和,在和小于0时抛弃从当前值重算.
+  * 这期间和的最大值即为最大子串 
+  * 可证:已知最大子串[x,y],那么0<=i<x, [i,x]必为负,[x,j]必为正
+
+            </script>
+          </section>
+         </section>
+
+          <section data-markdown>
+            <script type="text/template">
+##测试代码块
+            </script>
+          </section>
+
+        </section>
+
 
 
         <!-- *************************************************-->
