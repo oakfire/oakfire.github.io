@@ -116,7 +116,8 @@ todo: LETEX
   * **递归树法**　构建代价树,寻求效率边界
   * **主方法**　　可求解` T(n)=aT(n/b) + f(n)` 其中`a>=1,b>1,f(n)`是给定的函数
             </script>
- 
+          </section>
+
           <section data-markdown>
             <script type="text/template">
 ###4.1 最大子数组(maximum subarray)问题
@@ -125,7 +126,7 @@ todo: LETEX
 * 数组[low,high]取中点为mid,问题可分解为以下三值的最大者
   * [low,mid]子问题的解
   * [mid,high]子问题的解
-  * 跨越mid的最大子数组,线型时间
+  * 跨越mid的最大子数组,线性时间
 * 运行时间T(n)的递归式:
 * 习题4.1-5:最大子数组问题有线性时间解:Kanade 算法
   * 启发式. 扫描逐个求和,在和小于0时抛弃从当前值重算.
@@ -134,7 +135,6 @@ todo: LETEX
 
             </script>
           </section>
-         </section>
 
           <section data-markdown>
             <script type="text/template">
