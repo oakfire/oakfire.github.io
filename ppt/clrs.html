@@ -161,8 +161,44 @@ def max_subarray(A):
         max_so_far = max(max_so_far, max_ending_here)
     return max_so_far
     ```
-
             </script>
+          </section>
+
+          <section>
+            <h3>4.2 矩阵乘法的 Strassen 算法</h3>
+            <ul>
+                <li>若 $A=(a_{ij}),  B=(b_{ij})$ 是 $n*n$的方阵,则对$i,j=1,2,...,n$,定义乘积$C=A\centerdot B$中的元素$c_{ij}$为:</li>
+                $$ c_{ij} = \sum_{k=1}^n a_{ik} \centerdot b_{kj} $$
+                <li>SQUARE-MATRIX-MULTIPLY-RECURSIVE运行时间的递归式:</li>
+               
+$$
+  T(n) = \left\{ 
+   \begin{array}{l l}
+       \Theta(1) & \quad \text{if $n = 1$ }\\
+       8T(n/2)+\Theta(n^2) & \quad \text{if $n>1$}
+             \end{array} \right.
+$$
+
+            </ul>
+
+          </section>
+
+          <section>
+            <ul>
+                <li>Strassen 算法:核心思想是令递归数不那么茂盛
+                <li>Strassen 运行时间的递归式:</li>
+               
+$$
+  T(n) = \left\{ 
+   \begin{array}{l l}
+       \Theta(1) & \quad \text{if $n = 1$ }\\
+       7T(n/2)+\Theta(n^2) & \quad \text{if $n>1$}
+             \end{array} \right.
+$$
+
+            </ul>
+
+
           </section>
 
           <section data-markdown>
@@ -170,7 +206,12 @@ def max_subarray(A):
 ##测试代码块
             </script>
           </section>
-
+          
+          <section data-markdown>
+            <script type="text/template">
+##测试代码块
+            </script>
+          </section>
 
         </section>
 
