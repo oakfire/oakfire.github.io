@@ -43,9 +43,9 @@ Created by [yongjiu.wei](mailto:oakfire@163.com)
           <section data-markdown>
             <script type="text/template">
 ###2.2分析算法
-* 最坏情况与平均情况,插入排序 O(n2)
+* 最坏情况与平均情况,插入排序 $O(n2)$
 * 通常只关注最坏情况
-* 增长量级 O(n),O(lgn)...
+* 增长量级 $O(n)$,$O(lgn)$...
             </script>
           </section> 
 
@@ -58,7 +58,7 @@ Created by [yongjiu.wei](mailto:oakfire@163.com)
   * **分解**原问题为若干规模较小的同子问题;
   * **解决**:递归地求解子问题.子问题规模足够小时直接求解;
   * **合并**子问题成原问题的解.
-* 归并排序(MERGE-SORT)  O(nlgn) 
+* 归并排序(MERGE-SORT)  $O(nlgn)$ 
 * 思考题: 冒泡排序(BUBBLE-SORT);逆序对数量与插入排序的关系
             </script>
           </section>
@@ -73,10 +73,10 @@ Created by [yongjiu.wei](mailto:oakfire@163.com)
             <script type="text/template">
 ##第3章 函数的增长
 * 定义
-  * Θ记号:表示函数渐进紧确上下界
-  * Ο记号:渐进上界,包括渐进确界,与 非渐进确界
-  * Ω记号:渐进下界
-  * ο记号与ω记号: 只包括非渐进确界.
+  * $\Theta$记号:表示函数渐进紧确上下界
+  * $Ο$记号:渐进上界,包括渐进确界,与 非渐进确界
+  * $\Omega$记号:渐进下界
+  * $ο$记号与$\omega$记号: 只包括非渐进确界.
 * 性质: 传递性.自反性.对称性,转置对称性; 不满足三分性
             </script>
           </section>
@@ -111,10 +111,10 @@ todo: LETEX
 
 * **递归式**(recurrence)是一个等式或不等式,通过函数更小输入上的值来描述本身
 
-* 本章介绍三种求解递归式的方法,即Ο或Θ的渐进界:
+* 本章介绍三种求解递归式的方法,即$Ο$或$\Theta$的渐进界:
   * **代入法**　　数学归纳法证明猜测边界
   * **递归树法**　构建代价树,寻求效率边界
-  * **主方法**　　可求解` T(n)=aT(n/b) + f(n)` 其中`a>=1,b>1,f(n)`是给定的函数
+  * **主方法**　　可求解$T(n)=aT(n/b) + f(n)$其中$a>=1,b>1,f(n)$是给定的函数
             </script>
           </section>
 
@@ -127,11 +127,40 @@ todo: LETEX
   * [low,mid]子问题的解
   * [mid,high]子问题的解
   * 跨越mid的最大子数组,线性时间
-* 运行时间T(n)的递归式:
-* 习题4.1-5:最大子数组问题有线性时间解:Kanade 算法
+
+            </script>
+          </section>
+
+          <section>
+              <ul><li>分治解运行时间$T(n)$的递归式:</li></ul>
+
+
+$$
+  T(n) = \left\{ 
+   \begin{array}{l l}
+       \Theta(1) & \quad \text{if $n = 1$ }\\
+       2T(n/2)+\Theta(n) & \quad \text{if $n>1$}
+             \end{array} \right.
+$$
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+
+* 习题4.1-5:最大子数组问题的线性时间解: [Kanade 算法](http://en.wikipedia.org/wiki/Maximum_subarray_problem)
   * 启发式. 扫描逐个求和,在和小于0时抛弃从当前值重算.
   * 这期间和的最大值即为最大子串 
-  * 可证:已知最大子串[x,y],那么0<=i<x, [i,x]必为负,[x,j]必为正
+  * 可证:已知最大子串[x,y],那么$0\eqslantless i<x$, [i,x]必为负,[x,j]必为正
+  * 启发式是按照问题解的性质直接求得,记住方式就好.
+  * python 代码表达:
+    ```
+def max_subarray(A):
+    max_ending_here = max_so_far = 0
+    for x in A:
+        max_ending_here = max(0, max_ending_here + x)
+        max_so_far = max(max_so_far, max_ending_here)
+    return max_so_far
+    ```
 
             </script>
           </section>
@@ -141,6 +170,7 @@ todo: LETEX
 ##测试代码块
             </script>
           </section>
+
 
         </section>
 
@@ -177,7 +207,8 @@ todo: LETEX
         dependencies:[
           { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'js/plugin/math/math.js', async: true }
         ]
       });
     </script>
