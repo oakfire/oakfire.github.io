@@ -197,13 +197,42 @@ $$
 
           <section data-markdown>
             <script type="text/template">
-##测试代码块
+###4.3 用代入法求解递归式
+* 分为两步:
+  1. 猜测解的形式.
+  2. 用数学归纳法求出解的常数,并证明解为正确.
+* 做出好猜测,启发式,避免陷阱,改变变量
+
+###4.4 用递归树方法求解递归式
+* 递归数适合用来生成好的猜测
             </script>
           </section>
           
           <section data-markdown>
             <script type="text/template">
-##测试代码块
+###4.5 用主方法求解递归式
+* 主定理:定理4.1 令 $a\\geqslant 1$ 和 $b>1$ 是常数, $f(n)$是一个函数, $T(n)$是定义在非负整数上的递归式:
+$$ T(n)=aT(n/b)+f(n)$$其中将 $n/b$ 解释为 $\\lfloor n/b \\rfloor$ 或 $\\lceil n/b \\rceil$. 那么 $T(n)$ 有如下渐进界:
+  1. 若对某常数 $\\varepsilon >0$ 有 $f(n)=O(n^{log_ba -\\varepsilon})$, 则 $ T(n)=\\Theta(n^{log_ba})$
+  2. 若 $f(n)=\\Theta(n^{log_ba})$, 则 $T(n)=\\Theta(n^{log_ba}lgn)$
+  3. 若对某常数 $\\varepsilon>0$, 有 $f(n)=O(n^{log_ba +\\varepsilon})$, 且对某常数 $c<1$ 和所有足够大的 $n$ 有 $af(n/b)\\leqslant cf(n)$, 则 $T(n)=\\Theta(f(n))$
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 使用主方法:
+  * 最大子数组和归并排序的分治算法递归式 $T(n)=2T(n/2) + \\Theta(n)$,  有 $a=2, b=2, f(n) = \\Theta(n)$, 因此有 $n^{log_ba}=n^{log_2 2} = n$. 由于 $f(n)=\\Theta(n)$, 应用情况2, 于是得到解 $T(n)=\\Theta(nlgn)$ 
+  * 矩阵乘法普通分治算法递归式 $T(n)=8T(n/2)+\\Theta(n^2)$ , 应用情况1, 得出解 $T(n)=\\Theta(n^3)$
+  * 矩阵乘法 Strassen 算法递归式 $T(n)=7T(n/2)+\\Theta(n^2)$, 同情况1, 得出解 $T(n)=\\Theta(n^{lg7})$
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 主方法易用, 但只能应用于子问题规模相等的情况.
+* 子问题划分不均衡的算法的递归式, 可用 Akra-Bazzi 方法求解.详见书中的记注(p62)(ep110)
+
             </script>
           </section>
 
