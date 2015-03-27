@@ -127,21 +127,15 @@ todo: LETEX
   * [low,mid]子问题的解
   * [mid,high]子问题的解
   * 跨越mid的最大子数组,线性时间
-
-            </script>
-          </section>
-
-          <section>
-              <ul><li>分治解运行时间$T(n)$的递归式:</li></ul>
-
-
+* 分治解运行时间$T(n)$的递归式:
 $$
-  T(n) = \left\{ 
-   \begin{array}{l l}
-       \Theta(1) & \quad \text{if $n = 1$ }\\
-       2T(n/2)+\Theta(n) & \quad \text{if $n>1$}
-             \end{array} \right.
+T(n) = \\left\\{ 
+\\begin{array}{l l}
+\\Theta(1) & \\quad \\text{if $n = 1$ }\\\\
+2T(n/2)+\\Theta(n) & \\quad \\text{if $n>1$}
+\\end{array} \\right.
 $$
+           </script>
           </section>
 
           <section data-markdown>
@@ -150,7 +144,7 @@ $$
 * 习题4.1-5:最大子数组问题的线性时间解: [Kanade 算法](http://en.wikipedia.org/wiki/Maximum_subarray_problem)
   * 启发式. 扫描逐个求和,在和小于0时抛弃从当前值重算.
   * 这期间和的最大值即为最大子串 
-  * 可证:已知最大子串[x,y],那么$0\eqslantless i<x$, [i,x]必为负,[x,j]必为正
+  * 可证:已知最大子串 [x,y], 那么 $0\eqslantless i<x$, [i,x] 必为负, [x,j] 必为正
   * 启发式是按照问题解的性质直接求得,记住方式就好.
   * python 代码表达:
     ```
@@ -164,41 +158,41 @@ def max_subarray(A):
             </script>
           </section>
 
-          <section>
-            <h3>4.2 矩阵乘法的 Strassen 算法</h3>
-            <ul>
-                <li>若 $A=(a_{ij}),  B=(b_{ij})$ 是 $n*n$的方阵,则对$i,j=1,2,...,n$,定义乘积$C=A\centerdot B$中的元素$c_{ij}$为:</li>
-                $$ c_{ij} = \sum_{k=1}^n a_{ik} \centerdot b_{kj} $$
-                <li>SQUARE-MATRIX-MULTIPLY-RECURSIVE运行时间的递归式:</li>
+          <section data-markdown>
+            <script type="text/template">
+###4.2 矩阵乘法的 Strassen 算法
+        
+* 若 $A=(a\_{ij}),  B=(b\_{ij})$ 是 $n*n$ 的方阵,则对 $i,j=1,2,...,n $, 定义乘积 $ C=A\centerdot B $ 中的元素 $c\_{ij}$ 为:
+
+$$ c\_{ij} = \\sum\_{k=1}^n a\_{ik} \\centerdot b\_{kj} $$
+
+* SQUARE-MATRIX-MULTIPLY-RECURSIVE 运行时间的递归式:
                
 $$
-  T(n) = \left\{ 
-   \begin{array}{l l}
-       \Theta(1) & \quad \text{if $n = 1$ }\\
-       8T(n/2)+\Theta(n^2) & \quad \text{if $n>1$}
-             \end{array} \right.
+T(n) = \\left\\{ 
+\\begin{array}{l l}
+\\Theta(1) & \\quad \\text{if $n = 1$ }\\\\
+8T(n/2)+\\Theta(n^2) & \\quad \\text{if $n>1$}
+\\end{array} \\right.
 $$
 
-            </ul>
-
+            </script>
           </section>
 
-          <section>
-            <ul>
-                <li>Strassen 算法:核心思想是令递归数不那么茂盛
-                <li>Strassen 运行时间的递归式:</li>
-               
+          <section data-markdown>
+            <script type="text/template">
+* Strassen 算法:核心思想是令递归数不那么茂盛
+* Strassen 运行时间的递归式:
+
 $$
-  T(n) = \left\{ 
-   \begin{array}{l l}
-       \Theta(1) & \quad \text{if $n = 1$ }\\
-       7T(n/2)+\Theta(n^2) & \quad \text{if $n>1$}
-             \end{array} \right.
+T(n) = \\left\\{ 
+\\begin{array}{l l}
+\\Theta(1) & \\quad \\text{if $n = 1$ }\\\\
+7T(n/2)+\\Theta(n^2) & \\quad \\text{if $n>1$}
+\\end{array} \\right.
 $$
-
-            </ul>
-
-
+              
+            </script>
           </section>
 
           <section data-markdown>
@@ -248,8 +242,12 @@ $$
         dependencies:[
           { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'js/plugin/math/math.js', async: true }
+          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+          // mathjax 与 markdown 混用时, 要注意:
+          // 1. markdown的'\'有转意, 比如'\\'与'\{',表示'\'与'{'.所以安全起见,
+          //    可以把mathjax所有的'\'都在markdown里写为'\\'
+          // 2. markdown的'_'有斜体涵义, mathjax公式下标用到时, 需要转义为'\_'
+          ,{ src: 'js/plugin/math/math.js', async: true }
         ]
       });
     </script>
