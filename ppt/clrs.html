@@ -246,7 +246,7 @@ $$ T(n)=aT(n/b)+f(n)$$其中将 $n/b$ 解释为 $\\lfloor n/b \\rfloor$ 或 $\\l
 ##第5章 概率分析和随机算法
 ###5.1 雇用问题 HIRE-ASSISTANT
 * **平均情况运行时间**:对所有可能输入产生的运行时间取平均
-* **期望运行时间:随机算法的运行时间
+* **期望运行时间**:随机算法的运行时间
 ###5.2 指示器随机变量(indicator random variable)
 * 定义: 给定一个样本空间 $S$ 和一个事件 $A$, $$ I\\{A\\} = \\begin{cases} 1 & \\quad \\text{如果 $A$ 发生}\\\\ 0 & \\quad \\text{如果 $A$ 不发生} \\end{cases} $$
             </script>
@@ -260,6 +260,49 @@ $$ T(n)=aT(n/b)+f(n)$$其中将 $n/b$ 解释为 $\\lfloor n/b \\rfloor$ 或 $\\l
 
         </section>
 
+       <!-- 6*************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第6章 堆排序 HEAPSORT 
+* (二叉)**堆**是一个数组
+* **最大堆**: 在最大堆中,除了个根以外的所有结点 $i$ 都要满足:
+$$ A[PARENT(i)]\\geqslant A[i] $$
+* 最大堆相关的几个操作:
+  * MAX-HEAPIFY 过程: 时间复杂度 $O(lgn)$
+  * BUILD-MAX-HEAP 过程: 时间复杂度 $O(n)$
+  * HEAPSORT 过程: 时间复杂度 $O(nlgn)$, 原址堆排序
+  * MAX-HEAPINSERT, HEAP-EXTRACT-MAX, HEAP-INCREASE-KEY 和 HEAP-MAXIMUM 过程: 时间复杂度 $O(lgn)$, 利用堆实现一个优先队列(priority queue)
+            </script>
+          </section>
+
+        </section>
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第7章 快速排序 QUICKSORT
+* 快速排序也用到了分治思想,对应的三个过程:
+  1. **分解**(PARTITION): 数组 $A[p..r]$划分为两个(可能为空)子数组 $A[p..q-1]$ 和 $A[q+1..r]$ 使得前者元素小于等于$A[q]$, 后者每个元素大于等于 $A[q]$
+  2. **解决**: 通过递归调用快速排序;
+  3. **合并**: 子数组就是原址排序, 不需要合并,$A[p..r]$就已经有序
+* 快速排序的随机化版本 RANDOMIZED-PARTITION
+* 性能
+  * 最坏情况: $O(n^2)$
+  * 随机版本期望运行时间: $O(nlgn)$
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+##测试代码块
+            </script>
+          </section>
+
+        </section>
 
 
         <!-- *************************************************-->
