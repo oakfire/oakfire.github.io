@@ -296,14 +296,56 @@ $$ A[PARENT(i)]\\geqslant A[i] $$
             </script>
           </section>
 
+        </section>
+
+        <!-- *************************************************-->
+        <section>
+
           <section data-markdown>
             <script type="text/template">
-##测试代码块
+##第8章 线性时间排序
+###8.1 排序算法的下界
+* **比较排序**: 排序结果中各元素位置依赖于它们之间的比较
+* **定理8.1**: 在最坏情况下, 任何比较排序算法都需要做 $\\Omega(nlogn)$ 次比较 
+* **推论8.2**: 堆排序和归并排序都是渐近最优的比较排序算法
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 8.2 计数排序 COUNTING-SORT
+  * 计数排序假设 $n$ 个元素中的每一个都是在 0 到 k 区间内的一个整数, 其中 k 为某个整数. 当 $k=O(n)$ 时, 排序运行时间为 $\\Theta(n)$
+  * 计数排序的一个重要性质就是它是稳定的:具有相同值的元素在输出与输入的相对次序相同.
+* 8.3 基数排序 RADIX-SORT
+  * 给定 n 个 b 位数和任何正整数 $r\\leqslant b$, 如果使用的稳定排序算法对数据取值区间是 0 到 k 的输入进行排序耗时 $\\Theta(n+k)$, 那么RADIX-SORT 可在 $\\Theta((b/r)(n+2^r))$ 时间内排好序.
+  * 相比**比较排序**算法, 基数排序运行时间可为 $\\Theta(n)$ 但常数因子稍大,由于不是原址排序,更耗内存.
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 8.4 桶排序 BUCKET-SORT
+  * 假设输入数据服从均匀分布, 平均情况下桶排序时间代价为 $O(n)$
+  * 假设 $ n\_i $ 是表示桶 $B[i]$ 中元素个数的随机变量, 插入排序时间代价为平方阶, 所以桶排序时间为
+$$ T(n)=\\Theta(n)+\\sum\_{i=0}^{n-1}O(n\_{i}^2) $$
+  * 对上式两边取期望,有:
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+$$ \\begin{align\*} E[T(n)] &= E\\left[\\Theta(n)+\\sum\_{i=0}^{n-1}O(n\_{i}^2)\\right] \\\\&=\\Theta(n) +  \\sum\_{i=0}^{n-1}E[O(n\_{i}^2)] \\\\ &= \\Theta(n) + \\sum\_{i=0}^{n-1}O(E[n\_{i}^2]) \\end{align\*} $$ 
+
+* 可证:
+$$ E[n^2]=2-1/n$$
+
+* 那么可得期望运行时间为:
+$$ \\Theta(n)+n\\cdot O(2-1/n) = \\Theta(n)$$
+
             </script>
           </section>
 
         </section>
-
 
         <!-- *************************************************-->
         <section>
