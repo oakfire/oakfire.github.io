@@ -381,6 +381,83 @@ $$ \\Theta(n)+n\\cdot O(2-1/n) = \\Theta(n)$$
 
           <section data-markdown>
             <script type="text/template">
+## 第10章 基本数据结构
+* 10.1 栈(stack)和队列(queue): 栈后进先出(LIFO), 队列先进先出(FIFO)
+* 10.2 链表(linked list). 哨兵(sentinel)用于简化边界处理:常规双向列表可转变为有哨兵的双向循环列表
+* 10.3 指针和对象的实现
+* 10.4 有根树的表示
+
+            </script>
+          </section>
+
+        </section>
+
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+## 第11章 散列表
+* 11.1 直接寻址表(direct-address table). 1个槽(slot)对应0或1个元素. 不适用于全域很大的情况.
+* 11.2 散列表(hash table):通过散列函数映射, 一个槽可能有多个元素.解决冲突办法:
+  * **链接法**(chaining): 同一槽内的元素放置于一个链表中.
+  * 装载因子(load factor) $\\alpha$ : 给定 $n$ 个元素具有 $m$ 个槽的散列表,则 $\\alpha=n/m$
+  * 在简单均匀散列下,链接法的散列表,一次成功查找的所需时间为 $\\Theta(1+\\alpha)$
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 11.3 散列函数
+  * 除法散列法: $h(k)=k\\mod m$  其中 m 建议选用不太接近2的整数幂的素数
+  * 乘法散列法: $h(k)=\\lfloor m(kA\\mod 1)\\rfloor$, 其中$A(0<A<1)$为常数.
+  * 上条中的$A$ 任何值都适用, 但最佳选择为 $A\\approx (\\sqrt{5}-1)/2 = 0.6180339887\\ldots$
+  * 全域散列(universal hashing)法: 利用数论来设计散列函数,详见书 
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 11.4 解决冲突的第二种方法:开放寻址法(open addressing).
+  * 开放寻址法关键在于探查序列.
+  * 线性探查, 二次探查, 双重探查(double hashing 最好方法之一)
+  * 对于一个装载因子为 $\\alpha <1$ 的开放寻址列表, 一次成功查找的期望数至多为$\\frac{1}{\\alpha}ln{\\frac{1}{1-\\alpha}}$
+* 11.5 完全散列(pefect hashint): 详见书
+  * 只需从全域散列函数类中随机选出几个散列函数,尝试几次就可快速找到一个所需存储量较为合理的函数.
+            </script>
+          </section>
+
+
+        </section>
+
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第12章 二叉搜索树
+* 定义: 设 $x$为二叉搜索树的一个节点, 那么有 任意$x$的左子树节点 $\\leqslant x \\leqslant$ 任意$x$的右子树节点
+* 高度为 $h$ 的二叉搜索树上, 操作 SEARCH,MINIMUM,MAXIMUM, SUCCESSOR, PREDECESSOR,INSERT,DELETE 都可以在 $O(h)$ 时间内完成
+* **随机构建二叉搜索树**, 期望高度为 $O(\\lg n)$
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+##测试代码块
+            </script>
+          </section>
+
+        </section>
+
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
 ##测试代码块
             </script>
           </section>
