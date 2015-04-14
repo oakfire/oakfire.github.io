@@ -444,6 +444,70 @@ $$ \\Theta(n)+n\\cdot O(2-1/n) = \\Theta(n)$$
             </script>
           </section>
 
+        </section>
+
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第13章 红黑树(red-black tree)
+* 13.1 红黑树是一颗二叉搜索树,在每个结点上增加存储该结点的颜色,保持树的"平衡"依赖以下性质:
+  1. 每个结点非黑即红
+  2. 根结点为黑色
+  3. 每个叶结点(NIL)为黑色
+  4. 如果一个结点为红色,则它的两个子结点为黑色
+  5. 对每个结点,从该结点到任意后代叶结点的简单路径上, 均包含相同数目的黑色结点
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 13.2 旋转(ratation) 来保持 INSERT, DELETE操作后的红黑树性质
+* 13.3 插入(RB-INSERT) 花费时间 $O(\\lg n)$.旋转操作(RB-INSERT-FIXUP) 
+* 13.4 删除(RB-DELETE) 花费时间 $O(\\lg n)$. 旋转操作(RB-DELETE-FIXUP)
+            </script>
+          </section>
+
+        </section>
+
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第14章 数据结构的扩张
+* 14.1 动态顺序统计: 可快速找到第 $i$ 小的数
+  * 顺序统计树(order-statistic tree): 在红黑树基础上再添加存储该结点的子树(包括本身)结点数.
+  * 确定某秩的元素(OS-SELECT),确定元素的某秩(OS-RANK) 只需 $O(\\lg n)$ 时间
+  * 插入删除操作也只需要 $O(\\lg n)$ 时间.
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 14.2 红黑树的扩张
+  * 定理14.1 设 $f$ 是 $n$ 个结点的红黑树$T$扩张的属性, 且假设对任一结点$x$, $f$的值仅依赖于结点$x$, $x.left$和$x.right$的信息,还可能包括$x.left.f$和$x.right.f$. 那么, 我们可以在插入和删除操作期间对$T$的所有结点的$f$值进行维护, 并且不影响这两个操作的$O(\\lg n)$渐进时间性能.
+* 14.3 区间树(interval tree): 解决由区间构成(比如时间段)的动态集合的操作.
+* 思考题: 14-1 最大重叠点; 14-2 Josephus 排列.
+
+            </script>
+          </section>
+
+        </section>
+
+
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##测试代码块
+            </script>
+          </section>
+
           <section data-markdown>
             <script type="text/template">
 ##测试代码块
