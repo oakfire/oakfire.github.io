@@ -504,16 +504,36 @@ $$ \\Theta(n)+n\\cdot O(2-1/n) = \\Theta(n)$$
 
           <section data-markdown>
             <script type="text/template">
-##测试代码块
+##第 15 章 动态规划
+* 用于求解**最优化问题**(optimization problem)
+* 15.1 钢条切割
+  * **最优子结构**性质:问题的最优解由相关子问题的最优解组合而成,而子问题可独立求解
+  * CUD-ROD 递归求解效率低:$ T(n)=2^n $ , 因重复计算子问题.
+  * 动态规划法:付额外空间来节省计算时间,时空权衡(time-memory trade-off)
+  * MEMOIZED-CUT-ROD 与 BOTTOM-UP-CUT-ROD
             </script>
           </section>
-
           <section data-markdown>
             <script type="text/template">
-##测试代码块
+* 15.2 矩阵链乘法(matrix-chain multiplication problem)
+* 动态优化一般步骤:
+  - 刻画一个最优解的结构特征
+  - 递归地定义最优解的值
+  - 计算最优解的值,通常采用自底向上的方法
+  - 利用计算出的信息构造一个最优解
             </script>
           </section>
+          <section data-markdown>
+            <script type="text/template">
+* 15.3 动态规划原理
+* 适合动态规划的问题应具备: 最优子结构和子问题重叠
+* 15.4 最长公共子序列(longest-common-subsequence problem)
+  * 这名字很具有误导性啊,问题的详细定义要看书!
+* 15.5 最优二叉搜索树(optimal binary search tree)
+* 习题里好多经典问题
 
+            </script>
+          </section>
         </section>
 
 
