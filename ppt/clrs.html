@@ -536,6 +536,46 @@ $$ \\Theta(n)+n\\cdot O(2-1/n) = \\Theta(n)$$
           </section>
         </section>
 
+        <!-- *************************************************-->
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+##第16章 贪心算法
+* 活动选择问题(GREEDY-ACTIVITY-SELECTOR): $\\Theta(n) $
+* 贪心算法(greedy algorithm)原理:
+  * 贪心选择性质(greedy-choice property): 可通过局部最优选择来构造全局最优解
+  * 最优子结构性质.
+  * 论证:将子问题的最优解与贪心选择组合在一起能生成原问题的最优解.
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+* 设计贪心算法的一般步骤:
+  * 将最优化问题转化为:对其做出一次选择后,只剩下一个子问题需要求解;
+  * 证明做出贪心选择后,原问题总存在最优价,即贪心选择是安全的;
+  * 证明贪心选择后,剩余的子问题满足性质:其最优解与贪心选择的组合可得到原问题的最优解.
+            </script>
+          </section>
+
+
+          <section data-markdown>
+            <script type="text/template">
+* 16.3 赫夫曼编码(Huffman code): 前缀码(prefix code)
+* 16.4 拟阵与贪心算法
+  * **拟阵**(matroid): 定义详见书 P250(p436).
+  * **图拟阵**(graphic matroid)
+  * 很多可以用贪心算法得到最优解的问题都可以形式化为在一个加权拟阵中寻找最大权重独立子集的问题.
+  * GREEDY 算法及其证明
+* 16.5 用拟阵求解任务调度问题
+* 习题: 找零问题;无环子图;离线缓存
+            </script>
+          </section>
+
+        </section>
+
+
 
         <!-- *************************************************-->
         <section>
