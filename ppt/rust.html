@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Rust 介绍</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme" />
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+# Rust
+**Rust** is a systems programming language that runs blazingly fast, prevents nearly all segfaults, and guarantees thread safety.
+
+* Rust official site: [rust-lang.org](http://rust-lang.org)
+* PPT created by [yongjiu.wei](mailto:oakfire@163.com)
+          </script>       
+        </section>
+
+        <section>
+            <h2> What is Rust.</h2>
+            <ul><li>Rust is a systems programming language.</li>
+                <li class="fragment">Memory safety without garbage collection</li>
+                <li class="fragment">Concurrency without data races</li>
+                <li class="fragment">Abstraction without overhead</li>
+            </ul>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+## Featuring
+
+* 关键字: 静态类型/编译式语言/静态编译/动态编译、泛型/函数式/面向对象、模式匹配/ADT、DST/HKT/Associated Types/闭包(Closures)、Static/Dynamic/Multiple-Dispatch、 没有虚拟机(VM)、没有垃圾收集器(GC)、没有运行时(Runtime)、没有空指针/野指针/内存越界/缓冲区溢出/段错误、没有数据竞争(Data Race)……
+* 关键字: 社区友好,Servo(浏览器渲染引擎), rustc+std, Cargo(包管理与项目依赖管理)
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+## Installing
+
+* [安装介绍](https://doc.rust-lang.org/stable/book/installing-rust.html)
+
+  ```
+      $ curl -sf -L https://static.rust-lang.org/rustup.sh | sh
+
+      $ rustc --version
+  ```
+* Hello world: 
+  ```bash
+      $ vi main.rs
+  ```
+  ```rust
+      fn main() {
+          println!("hello world!");
+      }
+  ```
+  ```bash
+      $ rustc main.rs
+      $ ./main # or main.exe on Windows
+      Hello, world!
+  ```
+          </script>
+        </section>
+        <section>
+        <section data-markdown>
+          <script type="text/template">
+## Cargo
+* 包管理, 项目依赖管理, 测试, 文档生成
+* To start a new project with Cargo:
+  ```bash
+      $ cargo new hello_world --bin
+  ```
+* What we get:
+  ```bash
+      $ cd hello_world
+      $ tree .
+      .
+      ├── Cargo.toml
+      └── src
+          └── main.rs
+
+          1 directory, 2 files
+  ```
+  
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+* First, let’s check out `Cargo.toml`:
+  ```rust
+      [package]
+
+      name = "hello_world"
+      version = "0.1.0"
+      authors = ["Your Name <you@example.com>"]
+  ```
+* Cargo has generated a `main.rs` for us. Build:
+  ```bash
+      $ cargo build
+         Compiling hello_world v0.0.1 (file:///yourpath/projects/hello_world)
+      # run it
+      $ ./target/debug/hello_world
+      Hello, world!
+  ```
+* Or use `cargo run`:
+  ```bash
+      $ cargo run
+         Compiling hello_world v0.0.1 (file:///yourpath/projects/hello_world)
+           Running `target/debug/hello_world`
+      Hello, world!
+  ```
+          </script>
+        </section>
+      </section>
+      
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+###Syntax
+* 并发(concurrency): 
+  * `Send`接口: 跨线程传输安全 
+  * `Sync`接口: 多线程内存安全,like `Arc<T>`
+* OO: `struct`, `impl`接口编程; `Builder Pattern`替代方法重载; `Drop`接口,确定性析构; 暂无继承
+
+          </script>
+        </section>
+         
+        <section data-markdown>
+          <script type="text/template">
+* 函数式:匿名函数，闭包；
+* 泛型(Generics): 包括函数与 struct; 宏;
+* 支持接口 trait 编程, 静态派发. 扩展了OO与泛型.例如参数可声明为`fn myfun<T:SomeMethod> (a:T){}` 其中 `T:SomeMethod` 表示拥有接口 `SomeMethod` 的任意类型 `T`.
+* 内置高级数据类型,字符串处理原生支持 unicode
+          </script>
+        </section>
+    </section>
+    <section>
+        <section data-markdown>
+          <script type="text/template">
+###Memory safety
+* 编译期检查; 三个概念:所有权,引用,生存期
+* **所有权(ownership)**: 所有权唯一; 
+  * Move semantics:默认在变量绑定时转移所有权
+  ```rust
+      let v = vec![1, 2, 3];
+      let v2 = v; // ownership moved!
+      println!("v[0] is: {}", v[0]); //error: use of moved value: `v`
+  ```
+  * Copy 接口: 变量绑定时拷贝,不转移所有权; 所有原始类型都实现了此接口, like `i32`,`bool`.
+  * 函数参数也视作一次变量绑定
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+* **引用(borrowing, references)** 
+  * 引用生存期不能比所有者长;
+  * 可多个不变引用, 或一个可变引用, 但不能有两种引用同时存在;
+  ```rust
+       let c = 4;
+       let mut x = 5;
+       {
+           let y = &mut x;
+           *y += 1;
+       }// 确保 y 的生存期结束, 以方便 println 的 borrow
+       println!("{}", x); // print 6
+  ```
+
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+* **生存期(lifetimes)**, 可显式声明 `'a `, `'static` ;
+  ```rust
+      // implicit
+      fn foo(x: &i32) {
+      }
+      // explicit
+      fn bar<'a>(x: &'a i32) {
+      }
+  ```
+  ```rust
+      struct Foo<'a> {
+          x: &'a i32,
+      }
+      fn main() {
+          let y = &5; // is the same as `let _y = 5; let y = &_y;`
+          let f = Foo { x: y };
+          println!("{}", f.x);
+      }
+  ```
+  ```rust
+      fn x_or_y<'a, 'b>(x: &'a str, y: &'b str) -> &'a str {
+  ```
+
+          </script>
+        </section>
+
+      </section>
+
+      <section data-markdown>
+          <script type="text/template">
+#Q&A
+          </script>
+      </section>
+
+      
+      <section data-markdown>
+          <script type="text/template">
+* [rust-lang.org](http://rust-lang.org)
+* [Book: TRPL](https://doc.rust-lang.org/stable/book/README.html)
+* [为什么我说Rust是靠谱的编程语言](http://blog.csdn.net/liigo/article/details/45757123)
+          </script>
+      </section>
+      </div>
+    </div>
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      Reveal.initialize({
+        history: true,
+        
+        transition: 'slide',
+
+        dependencies:[
+          { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+    <div  style="display: block; position: absolute; bottom: 35px; left: 35px;  z-index: 20;">
+      <a href="./" style="display: inline-block; height: 34px; line-height: 34px; box-sizing: border-box; border: 1px solid #AAA; color: #AAA; text-decoration:none; text-transform: uppercase; padding:0 5px; ">go to ppt index</a>
+    </div>
+  </body>
