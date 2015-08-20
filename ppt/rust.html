@@ -209,6 +209,25 @@
 
       <section data-markdown>
           <script type="text/template">
+###代码组织机制
+* [crates](http://doc.rust-lang.org/reference.html#crates-and-source-files), [items and  attributes](http://doc.rust-lang.org/reference.html#items-and-attributes)
+* A crate contains a tree of nested module scopes…
+* items 默认为私有
+* 一个源文件对应一个或多个modules.文件本身就是一个module.
+* 代码包含:
+  ```rust
+      mod vec; //Load the `vec` module from `vec.rs`
+  ```
+* 默认加载标准库
+* 外部库(*.rlib), 用 `extern crate` 导入
+* 模块别名: `use`
+          </script>
+      </section>
+
+
+
+      <section data-markdown>
+          <script type="text/template">
 #Q&A
           </script>
       </section>
