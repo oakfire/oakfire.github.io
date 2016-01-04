@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Vue 介绍</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme" />
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+# Vue.js
+数据驱动的组件，为现代化的 Web 界面而生
+
+* Vue.js 官网 : [vue.org](http://cn.vue.org)
+* PPT created by [yongjiu.wei](mailto:oakfire@163.com)
+          </script>       
+        </section>
+
+        <section>
+            <h2> What is Vue.</h2>
+            <ul><li class="fragment">vue.js 为现代化的 web 界面而生</li>
+                <li class="fragment">官网中文教程详细, 不细讲</li>
+                <li class="fragment">想谈谈个人对 web 前端的了解</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> 从 MVC 说起</h2>
+            <ul><li class="fragment">什么是 MVC ? 桌面端的 MVC</li>
+                <li class="fragment">web 的 MVC ? 为何会流行? 交互即请求</li>
+                <li class="fragment">MVC 的局限性:  web2.0, 交互</li>
+                <li class="fragment">Jquery 的流行. 缺点,碎片化, 测试需求 </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> MVVM </h2>
+            <ul><li class="fragment">什么是 MVVM ? 桌面 ,WPF</li>
+                <li class="fragment">web 的 MVVM; UI的状态与状态转换; 组件化</li>
+                <li class="fragment">web 的 MVVM 为何近年层出?</li>
+                <li class="fragment">html5, ajax, websocket; ECMA 5,6; google 与 facebook, 组件化,团队合作</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2> 为什么是 vue.js </h2>
+            <ul><li class="fragment">IE 古老的组件化技术, com, 安全, 适用性 </li>
+                <li class="fragment">与 angular.js 的比较</li>
+                <li class="fragment">与 react.js 的比较</li>
+                <li class="fragment">学习成本低, 轻量, 模块友好. 另一种意义上的 jquery </li>
+            </ul>
+        </section>
+
+      <section data-markdown>
+          <script type="text/template">
+#Q&A
+          </script>
+      </section>
+
+      </div>
+    </div>
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      Reveal.initialize({
+        history: true,
+        
+        transition: 'slide',
+
+        dependencies:[
+          { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+    <div  style="display: block; position: absolute; bottom: 35px; left: 35px;  z-index: 20;">
+      <a href="./" style="display: inline-block; height: 34px; line-height: 34px; box-sizing: border-box; border: 1px solid #AAA; color: #AAA; text-decoration:none; text-transform: uppercase; padding:0 5px; ">go to ppt index</a>
+    </div>
+  </body>
