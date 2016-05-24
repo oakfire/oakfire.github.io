@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>css的z-index属性及html层级介绍</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme" />
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+## css z-index 与 html 层级
+
+解决前端界面的层级覆盖问题
+
+* [CSS 2.2 z-index](https://www.w3.org/TR/CSS22/visuren.html#z-index)
+* [MDN stacking context](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+* PPT created by [yongjiu.wei](mailto:oakfire@163.com)
+          </script>       
+        </section>
+
+        <section>
+            <h2>普通的 html 层级覆盖顺序</h2>
+            <ul><li class="fragment">普通流式布局，先渲染自己的背景与边框</li>
+                <li class="fragment">再渲染 position 为 static 的 normal 子节点</li>
+                <li class="fragment">再渲染 absolute 与 relative 子节点</li>
+                <li class="fragment">显然，渲染顺序靠后的覆盖靠前的,层级结构完全可以按 dom 树来</li>
+                <li class="fragment">那 fixed 等怎么办？</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> 加个 stacking context 概念</h2>
+            <ul>
+                <li class="fragment">不行了，渲染顺序不能纯依赖 dom 树结构</li>
+                <li class="fragment">需要额外构建树表示渲染顺序，即 stacking contexts 树</li>
+                <li class="fragment">stacking context 以 stack level 来表示z-axis 顺序 </li>
+                <li class="fragment">子 stacking context 受制于祖先</li> 
+                <li class="fragment">不是每个 dom 节点都有对应的 stacking context </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> 哪些 dom 节点拥有 stacking context </h2>
+            <ul><li class="fragment">根节点拥有根 stacking context</li>
+                <li class="fragment">fixed 元素 拥有</li>
+                <li class="fragment">可定位元素(absolute, relative) 如果 z-index 有值（非auto),则拥有</li>
+                <li class="fragment">其它CSS3新增添的需要额外渲染的元素，比如透明元素，旋转,透视等</li>
+                <li class="fragment">stacking context 的祖先关系按 dom 节点祖先关系</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2> stacking context 的渲染顺序</h2>
+            <ul><li class="fragment">渲染所关联元素的背景与边框</li>
+                <li class="fragment">渲染负值的子 stacking context </li>
+                <li class="fragment">the in-flow, non-inline-level, non-positioned descendants.</li>
+                <li class="fragment">the non-positioned floats </li>
+                <li class="fragment">the in-flow, inline-level, non-positioned descendants, including inline tables and inline blocks.</li>
+                <li class="fragment">渲染stack level 为0 的子 stacking context(符合拥有规则而z-index为默认auto的） 或 可定位子元素. </li>
+                <li class="fragment">渲染正值的子 stacking context</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> 所以z-index 的作用在于</h2>
+            <ul><li class="fragment">对 static 元素不起作用</li>
+                <li class="fragment">z-index 默认值为 auto, 如果值为 auto , 则stack level 为0 </li>
+                <li class="fragment">元素是否覆盖不能简单得看 z-index 值，而要看 stacking context 树</li>
+                <li class="fragment">查看 stacking context 树可简单回溯 dom 树，把z-index有值的抽出来来查看</li>
+                <li class="fragment">不知现代浏览器可有方便的工具查看？</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> 对 z-index 的使用建议</h2>
+            <ul><li class="fragment">只理解 z-index 字面意义的，最好不要用，不然都是坑（惨痛教训）</li>
+                <li class="fragment">能靠dom节点流先后顺序解决的，就不要用 z-index</li>
+                <li class="fragment">加句吐槽：任何有点历史的东西，使用时都要警惕历史包袱，特别是不要看字面意</li>
+                <li class="fragment">"html与css最早只是为了富文本流的排版而设计的"</li>
+            </ul>
+        </section>
+
+      <section data-markdown>
+          <script type="text/template">
+#Q&A
+          </script>
+      </section>
+
+      </div>
+    </div>
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      Reveal.initialize({
+        history: true,
+        
+        transition: 'slide',
+
+        dependencies:[
+          { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+    <div  style="display: block; position: absolute; bottom: 35px; left: 35px;  z-index: 20;">
+      <a href="./" style="display: inline-block; height: 34px; line-height: 34px; box-sizing: border-box; border: 1px solid #AAA; color: #AAA; text-decoration:none; text-transform: uppercase; padding:0 5px; ">go to ppt index</a>
+    </div>
+  </body>
