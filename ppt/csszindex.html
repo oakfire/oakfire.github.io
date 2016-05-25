@@ -42,7 +42,7 @@
                 <li class="fragment">不行了，渲染顺序不能纯依赖 dom 树结构</li>
                 <li class="fragment">需要额外构建树表示渲染顺序，即 stacking contexts 树</li>
                 <li class="fragment">stacking context 以 stack level 来表示z-axis 顺序 </li>
-                <li class="fragment">子 stacking context 受制于祖先</li> 
+                <li class="fragment">子 stacking context 受制于祖先, stack level 是以父节点为原点</li> 
                 <li class="fragment">不是每个 dom 节点都有对应的 stacking context </li>
             </ul>
         </section>
@@ -84,6 +84,7 @@
             <h2> 对 z-index 的使用建议</h2>
             <ul><li class="fragment">只理解 z-index 字面意义的，最好不要用，不然都是坑（惨痛教训）</li>
                 <li class="fragment">能靠dom节点流先后顺序解决的，就不要用 z-index</li>
+                <li class="fragment">有 css3 transform 等特效的节点的子节点尽量避免使用 z-index， 不然树太复杂</li>
                 <li class="fragment">加句吐槽：任何有点历史的东西，使用时都要警惕历史包袱，特别是不要看字面意</li>
                 <li class="fragment">"html与css最早只是为了富文本流的排版而设计的"</li>
             </ul>
