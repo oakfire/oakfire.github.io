@@ -5,13 +5,13 @@
     <atom:link href="http://blog.joak.org/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://blog.joak.org</link>
     <description>Yes, it's a joke.</description>
-    <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 08 Dec 2015 08:00:00 +0800</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>My Dream</title>
       <link>http://blog.joak.org/articles/dream-20151208/</link>
-      <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 08 Dec 2015 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">http://blog.joak.org/articles/dream-20151208/</guid>
       <author></author>
       <description>&lt;p&gt;　　昨晚又做了个梦&lt;span class=&quot;more&quot;&gt; &lt;/span&gt;&lt;/p&gt;
@@ -28,7 +28,7 @@
     <item>
       <title>Copycats</title>
       <link>http://blog.joak.org/articles/copycats/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2015 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">http://blog.joak.org/articles/copycats/</guid>
       <author></author>
       <description>&lt;p&gt;　　一看到本博客的小清新主题风格，就忍不住吐槽的欲望。今天来吐槽下盲目的跟风者，恩，我这个主题确实是模仿的，但不算盲目跟风！确实好看呢，追求美感是人类的天性……&lt;span class=&quot;more&quot;&gt; &lt;/span&gt;&lt;/p&gt;
@@ -46,24 +46,9 @@
 </description>
     </item>
     <item>
-      <title>Hello 2015</title>
-      <link>http://blog.joak.org/articles/hello-2015/</link>
-      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://blog.joak.org/articles/hello-2015/</guid>
-      <author></author>
-      <description>&lt;p&gt;　　2015 = 1024 + 512 + 256 + 128 + 64 + 16 + 8 + 4 + 2 + 1  &lt;/p&gt;
-&lt;p&gt;　　上面个式子，少了32。  &lt;span class=&quot;more&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;　　上一年元旦怎么过的忘了，今年元旦一大早，站在窗户前的阳光里，呼吸着冰冷但新鲜的空气，楼前的河流已经冻结，光滑的镜面反射着阳光，似乎可以静止几十年，然而河边路上的车流不会停歇，半夜加速的刺耳声变成了拥挤的轮胎摩擦声与喇叭声，一点也没有当年北京某年小区内的寂静。呵，近在眼前的沙沙声响起，掉光叶子的不知名的树也来找下存在感，在这住了近一年，仍不知道这树是哪种树，记得在北京是各种梧桐，武汉是法国梧桐，家里有松树杉树，中学仍然是各种梧桐，小学里是女贞树。一直对居住附近的树蛮在意的，西三旗五层楼高的梧桐染上了某种虫害，被齐腰砍断，还遗憾过一阵子————然而第二年春断枝旁抽发新枝，繁茂时远看也有一簇绿色，只不过只有一层楼高了。想得多了，发现眼前这窗外不知名的树，在2014春刚租住时倒是观察过一阵子，当时也是如此光秃秃掉光了树叶，因为窗外车声过于吵，我期待着它长出新叶阻隔噪声．长出后效果寥寥，就没怎么观察了。或者是错觉，总觉得比起当初，这些显得毫无生气的枝条，似乎左面多了一些，又在右面少了一些。  &lt;/p&gt;
-&lt;p&gt;　　不知不觉，树轮又添一轮了。左面是太阳升起至午，右面受右侧楼房阻隔，这树在明年，哦不，今年春发新叶后，该能会更好得吸收阳光，光合作用，到第二年，所添树轮应比今年要厚。  &lt;/p&gt;
-&lt;p&gt;　　树尤如此，人何以堪。  &lt;/p&gt;
-&lt;p&gt;　　一直彷徨，在这社会里，找到定位并不容易，也许不定位更为好，因为本身还在不断变化中。不定位，该负的责任不会少，也不必逃避，这是个必经过程，承当的责任慢慢变多后，自身定位就自然变得清晰。  &lt;/p&gt;
-&lt;p&gt;　　保持变化，保持进步。  &lt;/p&gt;
-</description>
-    </item>
-    <item>
       <title>Markdown syntax</title>
       <link>http://blog.joak.org/articles/markdown-syntax/</link>
-      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Jan 2015 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">http://blog.joak.org/articles/markdown-syntax/</guid>
       <author></author>
       <description>&lt;p&gt;Full markdown syntax taken from John Gruber’s &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Daring Fireball&lt;/a&gt;.
@@ -71,31 +56,31 @@ Did you know that 9 out of 10 bloggers prefer to write in markdown?&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&quot;markdown-syntax&quot;&gt;Markdown: Syntax&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#overview&quot;&gt;Overview&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#philosophy&quot;&gt;Philosophy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#html&quot;&gt;Inline HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#autoescape&quot;&gt;Automatic Escaping for Special Characters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#overview&quot;&gt;Overview&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#philosophy&quot;&gt;Philosophy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#html&quot;&gt;Inline HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#autoescape&quot;&gt;Automatic Escaping for Special Characters&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#block&quot;&gt;Block Elements&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#p&quot;&gt;Paragraphs and Line Breaks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#header&quot;&gt;Headers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#blockquote&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#list&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#precode&quot;&gt;Code Blocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#hr&quot;&gt;Horizontal Rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#block&quot;&gt;Block Elements&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#p&quot;&gt;Paragraphs and Line Breaks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#header&quot;&gt;Headers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#blockquote&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#list&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#precode&quot;&gt;Code Blocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#hr&quot;&gt;Horizontal Rules&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#span&quot;&gt;Span Elements&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#link&quot;&gt;Links&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#em&quot;&gt;Emphasis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#img&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#span&quot;&gt;Span Elements&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#link&quot;&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#em&quot;&gt;Emphasis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#img&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#misc&quot;&gt;Miscellaneous&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#backslash&quot;&gt;Backslash Escapes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#autolink&quot;&gt;Automatic Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#misc&quot;&gt;Miscellaneous&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#backslash&quot;&gt;Backslash Escapes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#autolink&quot;&gt;Automatic Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -111,8 +96,8 @@ can &lt;a href=&quot;http://blog.joak.org/projects/markdown/syntax.text&quot;&gt
 document should be publishable as-is, as plain text, without looking
 like it’s been marked up with tags or formatting instructions. While
 Markdown’s syntax has been influenced by several existing text-to-HTML
-filters — including &lt;a href=&quot;http://docutils.sourceforge.net/mirror/setext.html&quot;&gt;Setext&lt;/a&gt;, &lt;a href=&quot;http://www.aaronsw.com/2002/atx/&quot;&gt;atx&lt;/a&gt;, &lt;a href=&quot;http://textism.com/tools/textile/&quot;&gt;Textile&lt;/a&gt;, &lt;a href=&quot;http://docutils.sourceforge.net/rst.html&quot;&gt;reStructuredText&lt;/a&gt;,
-&lt;a href=&quot;http://www.triptico.com/software/grutatxt.html&quot;&gt;Grutatext&lt;/a&gt;, and &lt;a href=&quot;http://ettext.taint.org/doc/&quot;&gt;EtText&lt;/a&gt; — the single biggest source of
+filters – including &lt;a href=&quot;http://docutils.sourceforge.net/mirror/setext.html&quot;&gt;Setext&lt;/a&gt;, &lt;a href=&quot;http://www.aaronsw.com/2002/atx/&quot;&gt;atx&lt;/a&gt;, &lt;a href=&quot;http://textism.com/tools/textile/&quot;&gt;Textile&lt;/a&gt;, &lt;a href=&quot;http://docutils.sourceforge.net/rst.html&quot;&gt;reStructuredText&lt;/a&gt;,
+&lt;a href=&quot;http://www.triptico.com/software/grutatxt.html&quot;&gt;Grutatext&lt;/a&gt;, and &lt;a href=&quot;http://ettext.taint.org/doc/&quot;&gt;EtText&lt;/a&gt; – the single biggest source of
 inspiration for Markdown’s syntax is the format of plain text email.&lt;/p&gt;
 &lt;p&gt;To this end, Markdown’s syntax is comprised entirely of punctuation
 characters, which punctuation characters have been carefully chosen so
@@ -136,8 +121,8 @@ can be conveyed in plain text.&lt;/p&gt;
 use HTML itself. There’s no need to preface it or delimit it to
 indicate that you’re switching from Markdown to HTML; you just use
 the tags.&lt;/p&gt;
-&lt;p&gt;The only restrictions are that block-level HTML elements — e.g. &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;,
-&lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;, etc. — must be separated from surrounding
+&lt;p&gt;The only restrictions are that block-level HTML elements – e.g. &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;,
+&lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;, etc. – must be separated from surrounding
 content by blank lines, and the start and end tags of the block should
 not be indented with tabs or spaces. Markdown is smart enough not
 to add extra (unwanted) &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tags around HTML block-level tags.&lt;/p&gt;
@@ -154,7 +139,7 @@ This is another regular paragraph.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note that Markdown formatting syntax is not processed within block-level
 HTML tags. E.g., you can’t use Markdown-style &lt;code&gt;*emphasis*&lt;/code&gt; inside an
 HTML block.&lt;/p&gt;
-&lt;p&gt;Span-level HTML tags — e.g. &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;, or &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt; — can be
+&lt;p&gt;Span-level HTML tags – e.g. &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;, or &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt; – can be
 used anywhere in a Markdown paragraph, list item, or header. If you
 want, you can even use HTML tags instead of Markdown formatting; e.g. if
 you’d prefer to use HTML &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tags instead of Markdown’s
@@ -187,7 +172,7 @@ into &lt;code&gt;&amp;amp;amp;&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;AT&amp;amp;T
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Markdown will translate it to:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;AT&amp;amp;amp;T
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Similarly, because Markdown supports &lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#html&quot;&gt;inline HTML&lt;/a&gt;, if you use
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Similarly, because Markdown supports &lt;a href=&quot;#html&quot;&gt;inline HTML&lt;/a&gt;, if you use
 angle brackets as delimiters for HTML tags, Markdown will treat them as
 such. But if you write:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;4 &amp;lt; 5
@@ -206,7 +191,7 @@ and &lt;code&gt;&amp;amp;&lt;/code&gt; in your example code needs to be escaped.
 
 &lt;p&gt;A paragraph is simply one or more consecutive lines of text, separated
 by one or more blank lines. (A blank line is any line that looks like a
-blank line — a line containing nothing but spaces or tabs is considered
+blank line – a line containing nothing but spaces or tabs is considered
 blank.) Normal paragraphs should not be indented with spaces or tabs.&lt;/p&gt;
 &lt;p&gt;The implication of the “one or more consecutive lines of text” rule is
 that Markdown supports “hard-wrapped” text paragraphs. This differs
@@ -217,8 +202,8 @@ character in a paragraph into a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt; ta
 end a line with two or more spaces, then type return.&lt;/p&gt;
 &lt;p&gt;Yes, this takes a tad more effort to create a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;, but a simplistic
 “every line break is a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;“ rule wouldn’t work for Markdown.
-Markdown’s email-style &lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#blockquote&quot;&gt;blockquoting&lt;/a&gt; and multi-paragraph &lt;a href=&quot;http://blog.joak.org/articles/markdown-syntax/#list&quot;&gt;list items&lt;/a&gt;
-work best — and look better — when you format them with hard breaks.&lt;/p&gt;
+Markdown’s email-style &lt;a href=&quot;#blockquote&quot;&gt;blockquoting&lt;/a&gt; and multi-paragraph &lt;a href=&quot;#list&quot;&gt;list items&lt;/a&gt;
+work best – and look better – when you format them with hard breaks.&lt;/p&gt;
 &lt;h3 id=&quot;header&quot;&gt;Headers&lt;/h3&gt;
 
 &lt;p&gt;Markdown supports two styles of headers, &lt;a href=&quot;http://docutils.sourceforge.net/mirror/setext.html&quot;&gt;Setext&lt;/a&gt; and &lt;a href=&quot;http://www.aaronsw.com/2002/atx/&quot;&gt;atx&lt;/a&gt;.&lt;/p&gt;
@@ -238,7 +223,7 @@ corresponding to header levels 1-6. For example:&lt;/p&gt;
 
 ###### This is an H6
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Optionally, you may “close” atx-style headers. This is purely
-cosmetic — you can use this if you think it looks better. The
+cosmetic – you can use this if you think it looks better. The
 closing hashes don’t even need to match the number of hashes
 used to open the header. (The number of opening hashes
 determines the header level.) :&lt;/p&gt;
@@ -291,8 +276,8 @@ Quote Level from the Text menu.&lt;/p&gt;
 &lt;h3 id=&quot;list&quot;&gt;Lists&lt;/h3&gt;
 
 &lt;p&gt;Markdown supports ordered (numbered) and unordered (bulleted) lists.&lt;/p&gt;
-&lt;p&gt;Unordered lists use asterisks, pluses, and hyphens — interchangably
-— as list markers:&lt;/p&gt;
+&lt;p&gt;Unordered lists use asterisks, pluses, and hyphens – interchangably
+– as list markers:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;*   Red
 *   Green
 *   Blue
@@ -393,7 +378,7 @@ delimiters need to be indented:&lt;/p&gt;
     &amp;gt; This is a blockquote
     &amp;gt; inside a list item.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To put a code block within a list item, the code block needs
-to be indented &lt;em&gt;twice&lt;/em&gt; — 8 spaces or two tabs:&lt;/p&gt;
+to be indented &lt;em&gt;twice&lt;/em&gt; – 8 spaces or two tabs:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;*   A list item with a code block:
 
         &amp;lt;code goes here&amp;gt;
@@ -419,7 +404,7 @@ block by at least 4 spaces or 1 tab. For example, given this input:&lt;/p&gt;
 
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;This is a code block.
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;One level of indentation — 4 spaces or 1 tab — is removed from each
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;One level of indentation – 4 spaces or 1 tab – is removed from each
 line of the code block. For example, this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Here is an example of AppleScript:
 
@@ -437,7 +422,7 @@ end tell
 (or the end of the article).&lt;/p&gt;
 &lt;p&gt;Within a code block, ampersands (&lt;code&gt;&amp;amp;&lt;/code&gt;) and angle brackets (&lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt;)
 are automatically converted into HTML entities. This makes it very
-easy to include example HTML source code using Markdown — just paste
+easy to include example HTML source code using Markdown – just paste
 it and indent it, and Markdown will handle the hassle of encoding the
 ampersands and angle brackets. For example, this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    &amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;
@@ -522,14 +507,14 @@ or tabs for padding, which tends to look better with longer URLs:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Link definitions are only used for creating links during Markdown
 processing, and are stripped from your document in the HTML output.&lt;/p&gt;
 &lt;p&gt;Link definition names may consist of letters, numbers, spaces, and
-punctuation — but they are &lt;em&gt;not&lt;/em&gt; case sensitive. E.g. these two
+punctuation – but they are &lt;em&gt;not&lt;/em&gt; case sensitive. E.g. these two
 links:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[link text][a]
 [link text][A]
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;are equivalent.&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;implicit link name&lt;/em&gt; shortcut allows you to omit the name of the
 link, in which case the link text itself is used as the name.
-Just use an empty set of square brackets — e.g., to link the word
+Just use an empty set of square brackets – e.g., to link the word
 “Google” to the google.com web site, you could simply write:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Google][]
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then define the link:&lt;/p&gt;
@@ -623,7 +608,7 @@ multiple backticks as the opening and closing delimiters:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;``There is a literal backtick (`) here.``
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;which will produce this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;There is a literal backtick (`) here.&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The backtick delimiters surrounding a code span may include spaces —
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The backtick delimiters surrounding a code span may include spaces –
 one after the opening, one before the closing. This allows you to place
 literal backtick characters at the beginning or end of a code span:&lt;/p&gt;
 &lt;p&gt;  A single backtick in a code span: &lt;code&gt;` &lt;/code&gt;&lt;/p&gt;
@@ -720,6 +705,21 @@ _   underscore
 .   dot
 !   exclamation mark&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Hello 2015</title>
+      <link>http://blog.joak.org/articles/hello-2015/</link>
+      <pubDate>Thu, 01 Jan 2015 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">http://blog.joak.org/articles/hello-2015/</guid>
+      <author></author>
+      <description>&lt;p&gt;　　2015 = 1024 + 512 + 256 + 128 + 64 + 16 + 8 + 4 + 2 + 1  &lt;/p&gt;
+&lt;p&gt;　　上面个式子，少了32。  &lt;span class=&quot;more&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;　　上一年元旦怎么过的忘了，今年元旦一大早，站在窗户前的阳光里，呼吸着冰冷但新鲜的空气，楼前的河流已经冻结，光滑的镜面反射着阳光，似乎可以静止几十年，然而河边路上的车流不会停歇，半夜加速的刺耳声变成了拥挤的轮胎摩擦声与喇叭声，一点也没有当年北京某年小区内的寂静。呵，近在眼前的沙沙声响起，掉光叶子的不知名的树也来找下存在感，在这住了近一年，仍不知道这树是哪种树，记得在北京是各种梧桐，武汉是法国梧桐，家里有松树杉树，中学仍然是各种梧桐，小学里是女贞树。一直对居住附近的树蛮在意的，西三旗五层楼高的梧桐染上了某种虫害，被齐腰砍断，还遗憾过一阵子————然而第二年春断枝旁抽发新枝，繁茂时远看也有一簇绿色，只不过只有一层楼高了。想得多了，发现眼前这窗外不知名的树，在2014春刚租住时倒是观察过一阵子，当时也是如此光秃秃掉光了树叶，因为窗外车声过于吵，我期待着它长出新叶阻隔噪声．长出后效果寥寥，就没怎么观察了。或者是错觉，总觉得比起当初，这些显得毫无生气的枝条，似乎左面多了一些，又在右面少了一些。  &lt;/p&gt;
+&lt;p&gt;　　不知不觉，树轮又添一轮了。左面是太阳升起至午，右面受右侧楼房阻隔，这树在明年，哦不，今年春发新叶后，该能会更好得吸收阳光，光合作用，到第二年，所添树轮应比今年要厚。  &lt;/p&gt;
+&lt;p&gt;　　树尤如此，人何以堪。  &lt;/p&gt;
+&lt;p&gt;　　一直彷徨，在这社会里，找到定位并不容易，也许不定位更为好，因为本身还在不断变化中。不定位，该负的责任不会少，也不必逃避，这是个必经过程，承当的责任慢慢变多后，自身定位就自然变得清晰。  &lt;/p&gt;
+&lt;p&gt;　　保持变化，保持进步。  &lt;/p&gt;
 </description>
     </item>
   </channel>
